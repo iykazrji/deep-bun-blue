@@ -12,13 +12,13 @@ COPY package*.json ./
 # Copy Prisma
 COPY /prisma .
 
-COPY .env .
-
 # Install production dependencies only
 RUN npm install --production
 
 # Copy the rest of the application code
 COPY . .
+
+RUN npx prisma generate
 
 # Expose the port the application will listen on
 EXPOSE 3000
