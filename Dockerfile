@@ -13,7 +13,7 @@ COPY package*.json ./
 COPY /prisma .
 
 # Install production dependencies only
-RUN npm install --production
+RUN npm install --production && npm cache clean --force && npm install -g typescript
 
 # Copy the rest of the application code
 COPY . .
