@@ -24,6 +24,8 @@ RUN npx prisma generate
 EXPOSE 3000
 
 # Start the application in production mode
-CMD ["npm", "run", "build"]
+RUN npm run build
+
+CMD ["node", "dist/src/index.js"]
 
 
