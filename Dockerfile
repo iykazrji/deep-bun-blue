@@ -20,8 +20,6 @@ COPY . .
 
 RUN npx prisma generate
 
-RUN npx prisma migrate deploy
-
 # Expose the port the application will listen on
 EXPOSE 3000
 
