@@ -26,6 +26,6 @@ RUN npx prisma migrate deploy
 EXPOSE 3000
 
 # Start the application in production mode
-CMD ["npm", "build"]
+CMD ["npm", "run", "build"]
 
 
