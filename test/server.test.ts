@@ -1,5 +1,3 @@
-import typeorm = require("typeorm");
-
 const products = [
 	{
 		_id: "5f2678dff22e1f4a3c0782ee",
@@ -17,12 +15,6 @@ const dbMock = {
 		remove: jest.fn(),
 	},
 };
-
-typeorm.createConnection = jest.fn().mockReturnValue({
-	getRepository: (model) => dbMock[model.name],
-});
-
-typeorm.getConnectionOptions = jest.fn().mockReturnValue({});
 
 describe("Server", () => {
 	let server;

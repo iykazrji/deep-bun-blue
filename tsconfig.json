@@ -20,7 +20,6 @@
 			"*": ["node_modules/*"]
 		},
 		"noImplicitAny": false,
-		"lib": ["es6"],
-		"types": ["jest"]
+		"lib": ["es6"]
 	}
 }
